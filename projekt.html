@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pl"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>KNMM PW</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Koło Naukowe Modelowania Matematycznego" />
+	<meta name="keywords" content="knmm, mini, pw, koło naukowe, technika, , modelowanie, matematyczne, matematyka, models, modele" />
+	<meta name="author" content="FREEHTML5 & Urbaszek" />
+
+  
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="KNMM"/>
+	<meta property="og:image" content="https://knmm.mini.pw.edu.pl/images/logo-front.png">
+	<meta property="og:image:type" content="image/png">
+	<meta property="og:url" content="https://knmm.mini.pw.edu.pl"/>
+	<meta property="og:site_name" content="Kołowo Naukowe Modelowania Matematycznego"/>
+	<meta property="og:description" content="Geniusze modelowania z MiNI PW"/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+	
+	<!-- Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Monsterrat:400,700|Merriweather:400,300italic,700' rel='stylesheet' type='text/css'>
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Magnific Popup-->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	
+	<!-- Cards -->
+	<link rel="stylesheet" href="css/cards_1.5.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+   <script src="js/jquery.waypoints.min.js"></script>
+	<!-- Owl Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<!-- Stellar -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- WOW -->
+	<script src="js/wow.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+
+		<!--Latex-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script src="js/jquery.jslatex.js"></script>
+	<script>
+		$(function () {
+		    $(".latex").latex();
+		});
+	</script>
+	<script>
+		(function ($) {
+	    var attachToImage = function () {
+	        return $("<img/>").attr({
+	            src: this.src
+	        });
+	    },
+	        formats = {
+	        'gif': attachToImage,
+	        'png': attachToImage,
+	        'swf': function () {
+	            return $("<embed/>").attr({
+	                src: this.src,
+	                type: 'application/x-shockwave-flash'
+	            });
+	        }
+	    },
+	        sections = {
+	        '{f}': 'format',
+	        '{e}': 'equation'
+	    },
+	        escapes = {
+	        '+': '2B',
+	        '=': '3D'
+	    };
+
+	    $.fn.latex = function (opts) {
+	        opts = $.extend({},
+	        $.fn.latex.defaults, opts);
+	        opts.format = formats[opts.format] ? opts.format : 'gif';
+	        return this.each(function () {
+	            var $this = $(this),
+	                format, s, element, url = opts.url;
+	            opts.equation = $.trim($this.text());
+	            for (s in sections) {
+	                if (sections.hasOwnProperty(s) && (format = url.indexOf(s)) >= 0) {
+	                    url = url.replace(s, opts[sections[s]]);
+	                }
+	            }
+	            for (s in escapes) {
+	                if (escapes.hasOwnProperty(s) && (format = url.indexOf(s)) >= 0) {
+	                    url = url.replace(s, '%' + escapes[s]);
+	                }
+	            }
+	            opts.src = url;
+	            element = formats[opts.format].call(opts);
+	            $this.html('').append(element);
+	            if (opts.callback) {
+	                opts.callback.call(element);
+	            }
+	        });
+	    };
+
+	    $.fn.latex.defaults = {
+	        format: 'gif',
+	        url: 'http://latex.codecogs.com/{f}.latex?{e}'
+	    };
+	}(jQuery));
+	</script>
+
+
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+
+
+
+	<!-- Google analitics -->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-90089613-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	<meta name="google-site-verification" content="qH_JImDBw1jUNescJiilyC2w3i9Wyu6vnE16-pzC8tw" />
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-58BRLS6');</script>
+	<!-- End Google Tag Manager -->
+
+
+	</head>
+	<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58BRLS6"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	
+	<div id="main">
+		<nav class="fh5co-nav-style-1" role="navigation" data-offcanvass-position="fh5co-offcanvass-left">
+			<div class="container">
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 fh5co-logo">
+					<a href=""><img src="images/logo.png" style='max-width: 100%; display:block; height: auto;' border="0" alt="Null"></a>
+				</div>
+				<div class="col-lg-6 col-md-5 col-sm-5 text-center fh5co-link-wrap">
+					<ul data-offcanvass="yes">
+						<li><a class="toscroll" href="#onas">O nas</a></li> <!-- class="active" daje podświetlenie aktywnego buttona -->
+						<li><a class="toscroll" href="#modelowanie">Modelowanie</a></li>
+						<li><a class="toscroll" href="#board">Zarząd</a></li>
+						<li><a class="toscroll" href="#footer">Dokumenty</a></li>
+						<li><a class="toscroll" href="#footer">W skrócie</a></li>
+					</ul>
+				</div> 
+			</div>
+		</nav>
+
+
+		<div class="fh5co-cover fh5co-cover-style-2 js-full-height" data-stellar-background-ratio="1" data-next="yes"  style=
+				"background-image: url(images/project1.jpg); 
+				background-repeat: no-repeat;  
+			    background-attachment:scroll;      
+			    webkit-background-size: cover;
+			    -moz-background-size: cover;
+			    -o-background-size: cover;
+			    background-size: cover;">
+
+
+		  	<span class="scroll-btn wow fadeInUp" data-wow-duration=".6" data-wow-delay=".4s">
+				<a href="#">
+					<span class="mouse"><span></span></span>
+				</a>
+			</span>
+			<div class="fh5co-overlay"></div>
+			<div class="fh5co-cover-text">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-push-6 col-md-6 full-height js-full-height">
+							<div class="fh5co-cover-intro">
+								<h1 class="cover-text-lead wow fadeInUp" data-wow-duration=".6" data-wow-delay=".1s">Seminarium o Data Zając</h1>
+								<h2 class="cover-text-sublead wow fadeInUp" data-wow-duration=".6" data-wow-delay=".4s">Jak przelać dane na swoje własne konto bankowe. </h2>
+								<p class="wow fadeInUp" data-wow-duration=".6" data-wow-delay=".5s"><a href="#article" class="btn btn-primary btn-outline btn-lg">Czytaj dalej!</a></p>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+
+	</div>
+
+		<div id="article" class="fh5co-features-style-2">
+			<div class="container">
+				<div class="row p-b">
+					<div class="col-md-6 col-md-offset-3 text-center">
+						<h2 class="fh5co-heading wow fadeInUp" data-wow-duration=".6" data-wow-delay=".1s">Koło Naukowe Modelowania Matematycznego</h2>
+						<p class="wow fadeInUp" data-wow-duration=".6" data-wow-delay=".4s">Interdyscyplinarny zespół studentów z Politechniki Warszawskiej, który problemy traktuje jako kolejne zadanie do rozwiązania. </p>
+					</div>
+				</div>
+				<div>
+						<h3>Kreatywni</h3>
+						<p>
+								Classical approach for preference modelling is based on one binary relation called weak preference. Let a and b to be a pair of alternatives from defined set A. Then R is called a weak preference relation when
+
+						<div class="latex", align="center">\begin{center}
+							aRb $\iff$ “a is not worse than b”
+						\end{center} </div>
+
+						<p>Such definition of R implies that it has to be reflexive relation (aRa holds for any a $\in A$). Someone may indicate that in real life we use phrases like "a is better than b" or "no difference between a and b". Often it happens also that we are unable to compare two alternatives. 
+						The above R relation allows us to answer to above needs.</p>
+						<p>Let P, I, J be relations defined as follows:</p>
+						<div class="latex", align="center">
+									aPb $\iff$ aRb and not bRa (a is better than b) (1.1) \\
+									aIb $\iff$ aRb and bRa (no difference between a and b) (1.2) \\
+									aJb $\iff$ not aRb and not bRa (a and b cannot be compared) (1.3) \\
+						</div>
+						<p>The verbal expression could be simply represented by set-theoric operations as:</p>
+						<div class="latex", align="center">
+						$P = R \cap R^d$ (1.4) \\
+						$I = R \cap R^{-1}$ (1.5) \\
+						$J = R^c \cap R^d$ (1.6) \\
+			
+						</div></p>
+				</div>
+			</div>
+		
+
+		</div>
+	
+			
+		<div id="footer" class="fh5co-footer-style-3">
+			<div class="container">
+				<div class="row p-b">
+					<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration=".6" data-wow-delay=".1s">
+						<div class="fh5co-logo"><a href="#"><img src="images/logo.png" style='max-width: 100%; display:block; height: auto;' border="0" alt="Null"></a></div>
+						<p class="fh5co-copyright">&copy; 2016 Voltage & KNMM <br>All Rights Reserved. <br>Designed by <br> <a target="_blank" href="http://freehtml5.co">FREEHTML5.co</a><span> & </span><a target="_blank" href="https://www.flickr.com/photos/143325470@N04/">Urbaszek </a>
+					</div>
+					<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration=".6" data-wow-delay=".4s">
+						<h3>Na skróty</h3>
+						<ul class="fh5co-links">
+							<li><a href="#modelowanie">Modelowanie matematyczne</a></li>
+							<li><a href="#onas">O nas</a></li>
+							<li><a href="#board">Zarząd</a></li>
+							<li><a href="mailto:knmm@mini.pw.edu.pl">Kontakt</a></li>
+							<li><a href="">Dla członków</a></li>
+							<li><a target="_blank" href="https://www.facebook.com/"><i class="icon icon-facebook2"></i> Facebook</a></li>
+							
+	
+							
+						</ul>
+					</div>
+					<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration=".6" data-wow-delay=".4s">
+						<h3>Struktury</h3>
+						<ul class="fh5co-links">
+							<li><a target="_blank" href="http://www.mini.pw.edu.pl/tikiwiki/">Wydział MiNI</a></li>
+							<li><a target="_blank" href="https://www.pw.edu.pl/">Politechnika Warszawska</a></li>
+							<li><a target="_blank" href="https://rkn.sspw.pl/">Rada Kół Naukowych</a></li>
+							<li><a target="_blank" href="http://www.mini.pw.edu.pl/tikiwiki/pdf/pomoc17.pdf">1% dla PTM</a></li>
+							<li><br><li>
+						</ul>
+					</div>
+					<div class="clearfix visible-sm-block"></div>
+					<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration=".6" data-wow-delay=".7s">
+						<h3>Dokumenty</h3>
+						<ul class="fh5co-links fh5co-social">
+							<li><a target="_blank" href="Downloads/Regulamin.pdf">Regulamin koła</a></li>
+							<li><a href="#modelowanie">Status koła</a></li>
+							<li><a target="_blank" href="Downloads/Wniosek.pdf">Podanie o przyjęcie</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration=".6" data-wow-delay="1.2s">
+						<h3>W skrócie</h3>
+						<p>Zajmujemy się modelowaniem problemów związanych z techniką, medycyną i rzeczywistością. </p>
+						<p>E-mail: knmm@mini.pw.edu.pl</p>
+						<p><a href="mailto:knmm@mini.pw.edu.pl" class="btn btn-success btn-sm btn-outline">Kontakt</a></p>
+					</div>
+					<div class="clearfix visible-sm-block"></div>
+				</div>
+			</div>
+		</div>
+		<!-- END footer -->
+		
+
+	<!-- END page-->
+
+	</body>
+</html>
